@@ -25,7 +25,7 @@ public class CircleTest {
         double expected = 28.273500000000002;
         double actually = circle.area;
         System.out.println(circle.area);
-        assertEquals( expected, actually,0.1);
+        assertEquals(expected, actually, 0.1);
     }
 
     public void setAreaIncorrectValues() throws MyExeption {

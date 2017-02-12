@@ -11,9 +11,10 @@ public class Circle extends Shape {
 
     int radius;
 
-    Circle(){}
+    Circle() {
+    }
 
-    public Circle(int radius, String color){
+    public Circle(int radius, String color) {
 
         name = "Circle";
         this.radius = radius;
@@ -27,24 +28,25 @@ public class Circle extends Shape {
         }
         setPerimeter();
     }
+
     public void setColor(String c) {
         color = c;
     }
+
     void setArea(int r) throws MyExeption {
 
-        if(r <=0){
+        if (r <= 0) {
             MyExeption exeption = new MyExeption();
             throw exeption;
-        }
-        else{
+        } else {
             radius = r;
-            area = pi*Math.pow(radius, 2);
+            area = pi * Math.pow(radius, 2);
         }
     }
 
 
-    double setPerimeter(){
-        perimeter = 2*radius*pi;
+    double setPerimeter() {
+        perimeter = 2 * radius * pi;
         return perimeter;
     }
 }

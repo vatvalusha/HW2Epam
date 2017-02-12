@@ -11,31 +11,31 @@ import static org.junit.Assert.*;
 public class TrapeziumTest {
     @Test(expected = MyExeption.class)
     public void checkVarSide1ForZero() throws Exception {
-        Trapezium.createTrapezium(0,1,2,"Red");
+        Trapezium.createTrapezium(0, 1, 2, "Red");
     }
 
     @Test(expected = MyExeption.class)
     public void checkVarSide2ForZero() throws Exception {
-        Trapezium.createTrapezium(0,0,2,"Red");
+        Trapezium.createTrapezium(0, 0, 2, "Red");
     }
 
     @Test(expected = MyExeption.class)
     public void checkVarHeightForZero() throws Exception {
-        Trapezium.createTrapezium(1,1,0,"Red");
+        Trapezium.createTrapezium(1, 1, 0, "Red");
     }
 
     @Test
     public void trueResultAreaTest() throws MyExeption {
-        Trapezium trapezium = Trapezium.createTrapezium(2,3,4,"fd");
+        Trapezium trapezium = Trapezium.createTrapezium(2, 3, 4, "fd");
         trapezium.madeObj();
-        assertEquals(8,trapezium.getArea(),0.1);
+        assertEquals(8, trapezium.getArea(), 0.1);
     }
 
     @Test
     public void falseResultAreaTest() throws MyExeption {
-        Trapezium trapezium = Trapezium.createTrapezium(2,3,4,"fd");
+        Trapezium trapezium = Trapezium.createTrapezium(2, 3, 4, "fd");
         trapezium.madeObj();
-        assertEquals(10,trapezium.getArea(),0.1);
+        assertEquals(10, trapezium.getArea(), 0.1);
     }
 
 }

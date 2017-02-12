@@ -23,15 +23,16 @@ public class View {
         int tr = 0;
         int count = -1;
 //        String input = null;
-        System.out.println("FIGURA: \n");
+        System.out.println("FIGURE: \n");
         while (sc != 6) {
+            System.out.println("-------------------------------------------");
             System.out.println("1. Ring");
             System.out.println("2. Triangle");
             System.out.println("3. Parallelogram");
             System.out.println("4. Trapezium");
             System.out.println("5 Total amount");
             System.out.println("6. Exit \n");
-            System.out.print("Enter figure name: ");
+            System.out.print("Choose number: ");
             try {
 //                if (check.check(scanner)) input = scanner.nextLine();
 //                Figure figure = Figure.valueOf(input);
@@ -58,11 +59,10 @@ public class View {
                                 int side2 = scanner.nextInt();
                                 System.out.println("Input 3 side triangle: ");
                                 int side3 = scanner.nextInt();
-                                if (side1 < side2 + side3 && side2 < side1 + side3 && side3 < side2 + side1) {
-                                    Triangle triagle = new Triangle(side1, side2, side3, Color.randColor());
-                                    Shape.ll.add(triagle);
-                                    Shape.ll.get(count).getInfo();
-                                } else System.out.println("Triangle unreal");
+                                Triangle triangle = Triangle.createTriangleGeron(side1, side2, side3, Color.randColor());
+                                triangle.madeObjGeron();
+                                Shape.ll.add(triangle);
+                                Shape.ll.get(count).getInfo();
                                 break;
                             case 2:
                                 count++;
@@ -72,7 +72,8 @@ public class View {
                                 int side_2 = scanner.nextInt();
                                 System.out.println("Input angle between a and b triangle: ");
                                 double angle = scanner.nextDouble();
-                                Triangle triangle = new Triangle(side_1, side_2, angle, Color.randColor());
+                                triangle = Triangle.createTriangleSimple(side_1, side_2, angle, Color.randColor());
+                                triangle.madeObjSimple();
                                 Shape.ll.add(triangle);
                                 Shape.ll.get(count).getInfo();
                                 break;
@@ -100,7 +101,7 @@ public class View {
                         side2 = scanner.nextInt();
                         System.out.println("Input height Trapezium:");
                         height = scanner.nextInt();
-                        Trapezium trapezium = Trapezium.createTrapezium(side1,side2,height,Color.randColor());
+                        Trapezium trapezium = Trapezium.createTrapezium(side1, side2, height, Color.randColor());
                         trapezium.madeObj();
                         Shape.ll.add(trapezium);
                         Shape.ll.get(count).getInfo();

@@ -8,4 +8,8 @@ public class MyExeption extends Exception {
     public String getMessage() {
         return "Can't be zero or less zero";
     }
+
+    public String geronTriangle() {
+        return "Triangle is unreal";
+    }
 }

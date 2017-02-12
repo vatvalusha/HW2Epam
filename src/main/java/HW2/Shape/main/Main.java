@@ -1,5 +1,6 @@
 package HW2.Shape.main;
 
+import HW2.Shape.figurse.Triangle;
 import HW2.Shape.myExaption.MyExeption;
 
 /**
@@ -9,5 +10,6 @@ public class Main {
     public static void main(String[] args) throws MyExeption {
         new View().view();
     }
+
 
 }

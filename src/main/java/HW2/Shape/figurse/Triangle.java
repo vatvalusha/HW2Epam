@@ -1,5 +1,7 @@
 package HW2.Shape.figurse;
 
+import HW2.Shape.myExaption.MyExeption;
+
 /**
  * Created by vatva on 12.02.2017.
  */
@@ -18,9 +20,6 @@ public class Triangle extends Shape {
         this.side2 = b;
         this.side3 = c;
         this.color = color;
-        setAreaGerona(side1, side2, side3);
-        setPerimeterGerona();
-        setColor(color);
     }
 
     public Triangle(int a, int b, double angle, String color) {
@@ -29,13 +28,29 @@ public class Triangle extends Shape {
         this.side2 = b;
         this.angle = angle;
         this.color = color;
-        setAreaAngle(side1, side2, angle);
+    }
+
+    public static Triangle createTriangleGeron(int side1, int side2, int side3, String color) throws MyExeption {
+        if(side1<=0 || side2<=0 || side3<=0) throw new MyExeption();
+        else if(!(side1 < side2 + side3 && side2 < side1 + side3 && side3 < side2 + side1)) throw new MyExeption();
+        return new Triangle(side1, side2, side3, color);
+    }
+
+    public static Triangle createTriangleSimple(int side1, int side2, double angle, String color) throws MyExeption {
+        if(side1<=0 || side2<=0) throw new MyExeption();
+        else if(angle<=0) throw new MyExeption();
+        return new Triangle(side1,side2,angle,color);
+    }
+
+    public void madeObjSimple(){
+        setAreaAngle(side1,side2,angle);
         setPerimeter();
         setColor(color);
     }
-
-    public static Triangle createTriangle(){
-        return null;
+    public void madeObjGeron(){
+        setAreaGerona(side1,side2,side3);
+        setPerimeter();
+        setColor(color);
     }
 
     public void setColor(String color) {
@@ -46,7 +61,7 @@ public class Triangle extends Shape {
         side1 = a;
         side2 = b;
         this.angle = angle;
-        area = 0.5 * side1 * side2 * Math.sin(angle);
+        area = 0.5 * side1 * side2 * Math.sin(Math.toRadians(angle));
     }
 
     public void setAreaGerona(int a, int b, double c) {

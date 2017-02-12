@@ -5,8 +5,12 @@ package HW2.Shape.figurse;
  */
 public interface FunctForShapes {
     String getName();
+
     String getColor();
+
     double getPerimeter();
+
     double getArea();
+
     public void getInfo();
 }

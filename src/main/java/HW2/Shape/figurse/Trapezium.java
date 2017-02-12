@@ -12,15 +12,7 @@ public class Trapezium extends Shape {
     private int side4;
     private int height;
 
-    public Trapezium(int side1,int side2,int side3,int side4,String color){
-        name = "Trapezium";
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
-        this.side4 = side4;
-        setPerimetr();
-    }
-    public Trapezium(int side1,int side2,int height, String color){
+    public Trapezium(int side1, int side2, int height, String color) {
         name = "Trapezium";
         this.side1 = side1;
         this.side2 = side2;
@@ -28,24 +20,22 @@ public class Trapezium extends Shape {
         this.color = color;
 
     }
-    public static  Trapezium createTrapezium(int side1, int side2, int height, String color) throws MyExeption {
-        if(side1<=0 || side2 <=0 || height<=0) throw new MyExeption();
-        return new Trapezium(side1,side2,height,color);
+
+    public static Trapezium createTrapezium(int side1, int side2, int height, String color) throws MyExeption {
+        if (side1 <= 0 || side2 <= 0 || height <= 0) throw new MyExeption();
+        return new Trapezium(side1, side2, height, color);
     }
 
-    public void madeObj(){
+    public void madeObj() {
         setArea();
         setPerimetr();
     }
-    public void setColor(String c) {
-        color = c;
+
+    public void setPerimetr() {
+        perimeter = side1 + side2 + side3 + side4;
     }
 
-    public void setPerimetr(){
-        perimeter = side1+side2+side3+side4;
-    }
-
-    public void setArea(){
-        area = ((side1+side2)/2)*height;
+    public void setArea() {
+        area = ((side1 + side2) / 2) * height;
     }
 }
