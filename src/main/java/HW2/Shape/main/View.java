@@ -30,7 +30,7 @@ public class View {
             System.out.println("2. Triangle");
             System.out.println("3. Parallelogram");
             System.out.println("4. Trapezium");
-            System.out.println("5 Total amount");
+            System.out.println("5. Total amount");
             System.out.println("6. Exit \n");
             System.out.print("Choose number: ");
             try {
