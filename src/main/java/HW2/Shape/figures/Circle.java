@@ -1,10 +1,9 @@
-package HW2.Shape.figurse;
+package HW2.Shape.figures;
 
 /**
  * Created by vatva on 12.02.2017.
  */
 
-import HW2.Shape.figurse.Shape;
 import HW2.Shape.myExaption.MyExeption;
 
 public class Circle extends Shape {
@@ -12,6 +11,10 @@ public class Circle extends Shape {
     int radius;
 
     Circle() {
+    }
+
+    public double getArea() {
+        return area;
     }
 
     public Circle(int radius, String color) {

@@ -1,8 +1,6 @@
-package HW2.Shape.figurse;
+package HW2.Shape.figures;
 
 import HW2.Shape.myExaption.MyExeption;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

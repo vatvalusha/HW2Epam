@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Created by vatva on 12.02.2017.
  */
 public class Check {
+    public static int c = 13;
     public boolean check(Scanner scanner) {
         while (!scanner.hasNextLine()) {
             System.out.println("Incorrect formal");

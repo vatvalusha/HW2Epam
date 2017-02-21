@@ -1,4 +1,4 @@
-package HW2.Shape.figurse;
+package HW2.Shape.figures;
 
 import HW2.Shape.myExaption.MyExeption;
 
@@ -12,6 +12,10 @@ public class Triangle extends Shape {
     private double angle;
 
     public Triangle() {
+    }
+
+    public double getArea() {
+        return area;
     }
 
     public Triangle(int a, int b, int c, String color) {

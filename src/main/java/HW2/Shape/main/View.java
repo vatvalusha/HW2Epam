@@ -1,12 +1,10 @@
 package HW2.Shape.main;
 
-import HW2.Shape.figurse.*;
+import HW2.Shape.figures.*;
 import HW2.Shape.check.Check;
 import HW2.Shape.color.Color;
 import HW2.Shape.myExaption.MyExeption;
 
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 /**

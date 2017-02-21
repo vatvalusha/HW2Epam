@@ -1,4 +1,4 @@
-package HW2.Shape.figurse;
+package HW2.Shape.figures;
 
 import HW2.Shape.myExaption.MyExeption;
 import org.junit.Test;

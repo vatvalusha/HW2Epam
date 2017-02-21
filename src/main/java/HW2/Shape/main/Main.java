@@ -1,6 +1,5 @@
 package HW2.Shape.main;
 
-import HW2.Shape.figurse.Triangle;
 import HW2.Shape.myExaption.MyExeption;
 
 /**

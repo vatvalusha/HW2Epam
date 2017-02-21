@@ -1,4 +1,4 @@
-package HW2.Shape.figurse;
+package HW2.Shape.figures;
 
 import HW2.Shape.myExaption.MyExeption;
 
@@ -37,5 +37,10 @@ public class Trapezium extends Shape {
 
     public void setArea() {
         area = ((side1 + side2) / 2) * height;
+    }
+
+    @Override
+    public double getArea() {
+        return area;
     }
 }

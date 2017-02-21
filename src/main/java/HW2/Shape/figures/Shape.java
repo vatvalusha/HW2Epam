@@ -1,4 +1,4 @@
-package HW2.Shape.figurse;
+package HW2.Shape.figures;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by vatva on 12.02.2017.
  */
-public class Shape implements FunctForShapes {
+public abstract class Shape implements FunctForShapes {
     public static List<Shape> ll = new LinkedList<Shape>();
 
     String color;
@@ -54,10 +54,7 @@ public class Shape implements FunctForShapes {
         return perimeter;
     }
 
-    public double getArea() {
-        return area;
-    }
-
+    public abstract double getArea();
 
     @Override
     public String toString() {

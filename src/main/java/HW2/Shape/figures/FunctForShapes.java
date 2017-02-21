@@ -1,4 +1,4 @@
-package HW2.Shape.figurse;
+package HW2.Shape.figures;
 
 /**
  * Created by vatva on 12.02.2017.

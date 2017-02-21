@@ -1,4 +1,4 @@
-package HW2.Shape.figurse;
+package HW2.Shape.figures;
 
 import HW2.Shape.myExaption.MyExeption;
 
@@ -12,6 +12,10 @@ public class Parallelogram extends Shape {
 
 
     Parallelogram() {
+    }
+
+    public double getArea() {
+        return area;
     }
 
     public Parallelogram(int side1, int side2, int height, String color) {
